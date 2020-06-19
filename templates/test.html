@@ -18,9 +18,9 @@
         </div>
 
         {% if account %}
-        <input type="button" onclick="location.href = '{{ url_for('logout') }}'" value="登出">
+            <input type="button" onclick="location.href = '{{ url_for('logout') }}'" value="登出">
         {% else %}
-        <input type="button" onclick="location.href = '{{ url_for('login') }}'" value="登入">
+            <input type="button" onclick="location.href = '{{ url_for('login') }}'" value="登入">
         {% endif %}
     </body>
 </html>

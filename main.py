@@ -7,9 +7,9 @@ app.secret_key = "IotaToTheMoon"
 
 login_manager = LoginManager(app)
 
-client = MongoClient('localhost', username='iotaUser', password='pa', authSource='iotaProject')
+client = MongoClient('mongodb://ds261277.mlab.com:61277', username='iotaUser', password='i0tapa', authSource='heroku_p952xp63')
 
-db = client['iotaProject']
+db = client['heroku_p952xp63']
 users = db['users']
 
 @login_manager.user_loader  
@@ -43,7 +43,7 @@ def login():
     if request.method == 'POST':
         status = login_check(request.form['account'], request.form['password'])
 
-        print("status", status)
+        # print("status", status)
 
         if status == 1:
             user = User()
