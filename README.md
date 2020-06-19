@@ -6,4 +6,4 @@
 
 `git checkout BRANCH_NAME`
 
-mongo的部分我就沒辦法了 之後到heroku上開個小資料庫來用
+mongo的部分是從heroku上開的小資料庫來放
