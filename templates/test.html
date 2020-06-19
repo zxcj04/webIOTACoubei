@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Page</title>
+    </head>
+
+    <body>
+        <h2>Test</h2>
+        
+        {% if account %}
+            <p>Hi, <span style="color: gray;">{{account}}</span>, welcome back!</p>
+        {% endif %}
+
+        <div>
+            <p>
+                there's <span style="color:red">nothing</span> here
+            </p>    
+        </div>
+
+        {% if account %}
+        <input type="button" onclick="location.href = '{{ url_for('logout') }}'" value="登出">
+        {% else %}
+        <input type="button" onclick="location.href = '{{ url_for('login') }}'" value="登入">
+        {% endif %}
+    </body>
+</html>
