@@ -5,22 +5,34 @@
     </head>
 
     <body>
+        <!-- development version, includes helpful console warnings -->
+
         <h2>Test</h2>
         
-        {% if account %}
+        <!-- {% if account %}
             <p>Hi, <span style="color: gray;">{{account}}</span>, welcome back!</p>
-        {% endif %}
+        {% endif %} -->
 
-        <div>
+        <div id="app">
             <p>
                 there's <span style="color:red">nothing</span> here
-            </p>    
+            </p>
+
+            {{comment}}
         </div>
 
-        {% if account %}
+        <!-- {% if account %}
             <input type="button" onclick="location.href = '{{ url_for('logout') }}'" value="登出">
         {% else %}
             <input type="button" onclick="location.href = '{{ url_for('login') }}'" value="登入">
-        {% endif %}
+        {% endif %} -->
+
+        <hr>
+
+        <img src="./static/images/vue_example.png" />
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        <script src="./static/js/test.js"></script>
     </body>
 </html>
+
