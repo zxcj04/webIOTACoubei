@@ -10,7 +10,7 @@ import Tab from './components/Tab.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Tab
   }
 }
 </script>
