@@ -1,0 +1,7 @@
+db.createUser(
+{user:'iotaUser',
+ pwd:'pa', 
+ roles:[
+   {role:'readWrite', db:'iotaProject'}
+]
+})
