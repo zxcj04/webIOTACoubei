@@ -167,26 +167,6 @@
 
                 }, 300)
             },
-
-            preDraw(index) {
-                if(this.status.isReplaying || this.data[index] != "" || this.win)
-                    return
-
-                this.status.preShow = index
-
-                this.data.splice(index, 1, this.status.now)
-            },
-
-            leftDraw(index) {
-                if(this.status.preShow == -1)
-                {
-                    return
-                }
-
-                this.data.splice(index, 1, "")
-                
-                this.status.preShow = -1
-            },
         },
 
         computed: {
@@ -288,9 +268,5 @@
     td {
         width: 100px;
         text-align: center;
-    }
-
-    .preShow {
-        color: gray;
     }
 </style>
